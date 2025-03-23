@@ -12,17 +12,21 @@ import Factories.GUIFactory;
  * Factory users don't care which concrete factory they use since they work with
  * factories and products through abstract interfaces.
  */
-public class Application {
-    private Button button;
-    private Checkbox checkbox;
 
+// Classe Application que utiliza os componentes criados por uma fábrica GUIFactory
+public class Application {
+    private Button button;      // Botão da interface gráfica
+    private Checkbox checkbox;  // Checkbox da interface gráfica
+
+    // Construtor recebe uma fábrica que cria os componentes apropriados
     public Application(GUIFactory factory) {
-        button = factory.createButton();
-        checkbox = factory.createCheckbox();
+        button = factory.createButton();   // Cria um botão específico para a plataforma
+        checkbox = factory.createCheckbox(); // Cria um checkbox específico para a plataforma
     }
 
+    // Método para renderizar os componentes criados
     public void paint() {
-        button.paint();
-        checkbox.paint();
+        button.paint();   // Renderiza o botão
+        checkbox.paint(); // Renderiza o checkbox
     }
 }

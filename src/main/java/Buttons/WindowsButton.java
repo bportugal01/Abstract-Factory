@@ -9,8 +9,11 @@ package Buttons;
  *
  * This is another variant of a button.
  */
+
+// Implementação concreta da interface Button para o sistema Windows
 public class WindowsButton implements Button {
 
+    // Método responsável por renderizar o botão específico do Windows
     @Override
     public void paint() {
         System.out.println("Você criou o WindowsButton.");

@@ -12,6 +12,10 @@ package Buttons;
  * This is the common interface for buttons family.
  */
 
+// Interface que define um botão genérico para a interface gráfica
 public interface Button {
+    
+    // Método abstrato que será implementado pelas classes concretas
+    // Cada implementação definirá como o botão será renderizado (pintado) na tela
     void paint();
 }

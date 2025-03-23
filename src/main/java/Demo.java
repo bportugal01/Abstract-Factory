@@ -12,28 +12,36 @@ import Factories.WindowsFactory;
 /**
  * Demo class. Everything comes together here.
  */
-public class Demo {
 
-    /**
+public class Demo {
+  /**
      * Application picks the factory type and creates it in run time (usually at
      * initialization stage), depending on the configuration or environment
      * variables.
      */
+   
     private static Application configureApplication() {
         Application app;
         GUIFactory factory;
+
+        // Obtém o nome do sistema operacional
         String osName = System.getProperty("os.name").toLowerCase();
+
+        // Define a fábrica de acordo com o sistema operacional detectado
         if (osName.contains("mac")) {
-            factory = new MacOSFactory();
+            factory = new MacOSFactory(); // Fábrica específica para MacOS
         } else {
-            factory = new WindowsFactory();
+            factory = new WindowsFactory(); // Fábrica específica para Windows
         }
+
+        // Cria a aplicação utilizando a fábrica selecionada
         app = new Application(factory);
         return app;
     }
 
     public static void main(String[] args) {
+        // Configura e inicializa a aplicação com os componentes adequados
         Application app = configureApplication();
-        app.paint();
+        app.paint(); // Renderiza os componentes criados
     }
 }

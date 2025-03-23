@@ -11,8 +11,10 @@ package Buttons;
  */
 
 
+// Implementação concreta da interface Button para o sistema MacOS
 public class MacOSButton implements Button {
 
+    // Método responsável por renderizar o botão específico do MacOS
     @Override
     public void paint() {
         System.out.println("Você criou o MacOSButton.");

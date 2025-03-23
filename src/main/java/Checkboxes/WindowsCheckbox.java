@@ -9,8 +9,10 @@ package Checkboxes;
  *
  * This is another variant of a checkbox.
  */
+// Implementação concreta da interface Checkbox para o sistema Windows
 public class WindowsCheckbox implements Checkbox {
 
+    // Método responsável por renderizar o checkbox específico do Windows
     @Override
     public void paint() {
         System.out.println("Você criou o WindowsCheckbox.");
